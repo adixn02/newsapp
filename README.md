@@ -1,0 +1,1 @@
+19a77405de244190ac8331dd7f2b04fc  -  news blog api //https://newsapi.org/register/success

@@ -1,0 +1,28 @@
+.nav-items {
+  position: relative; /* Ensures ::after is positioned relative to this element */
+}
+
+.nav-items::after {
+  content: ""; /* Add empty content */
+  position: absolute;
+  bottom: 0; /* Positions at the bottom */
+  left: 0;
+  width: 0; /* Initially no width */
+  height: 2px; /* The height of the border */
+  background-color: rgb(51, 133, 239); /* The color of the "border" */
+  transition: width 0.5s ease-in-out; /* Smooth transition */
+  cursor:pointer;
+}
+
+.nav-items:hover::after {
+  width: 100%; /* Expands the pseudo-element's width on hover */
+  cursor: pointer; /* Changes the cursor to pointer */
+}
+.newsarea{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(340px,1fr));
+
+}
+.newsCard img{
+  height: 250px;
+}
