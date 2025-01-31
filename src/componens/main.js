@@ -9,6 +9,7 @@ const Main = ({ searchvalue, filterdata, setFilterData, setAllnews }) => {
       let response = await fetch(api);
       let data = await response.json();
       let articles = data.articles;
+      console.log(articles)
       setAllnews(articles); 
       setFilterData(articles);
     } catch (e) {
@@ -25,7 +26,7 @@ const Main = ({ searchvalue, filterdata, setFilterData, setAllnews }) => {
       {filterdata && filterdata.length > 0 ? (
         filterdata.map((news, index) => <Newscard key={index} news={news} />)
       ) : (
-        <p>No news articles found</p>
+        <p>loading...</p>
       )}
     </div>
   );
